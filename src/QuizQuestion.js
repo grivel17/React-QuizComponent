@@ -9,13 +9,11 @@ class QuizQuestion extends Component {
           <p>{this.props.quiz_question.instruction_text}</p>
         </section>
         <section className="buttons">
-          <ul>
-
-              {this.props.quiz_question.answer_options
-                  .map((k,i) =>
-                  {return <QuizQuestionButton key={i} button_text={k} />})}
-
-          </ul>
+            <ul>
+            {this.props.quiz_question.answer_options.map((answer_option, index) => {
+                return <QuizQuestionButton key={index} button_text={answer_option} />
+            })}
+            </ul>
         </section>
       </main>
     );
