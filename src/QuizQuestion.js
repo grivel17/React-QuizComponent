@@ -24,6 +24,7 @@ class QuizQuestion extends Component {
     render() {
     return (
       <main>
+          {this.state.incorrectAnswer? <p className='error'>Sorry, that's not right</p>:null }
         <section>
           <p>{this.props.quiz_question.instruction_text}</p>
         </section>
